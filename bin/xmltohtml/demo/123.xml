@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<employees>
+	<employee-list>
+		<employee>
+			<id>001</id>
+			<name>李达</name>
+			<gender>男</gender>
+			<address>北京海淀</address>
+		</employee>
+		<employee>
+			<id>002</id>
+			<name>赵超</name>
+			<gender>男</gender>
+			<address>上海黄浦</address>
+		</employee>
+		<employee>
+			<id>003</id>
+			<name>张云</name>
+			<gender>女</gender>
+			<address>山东济南</address>
+		</employee>
+	</employee-list>
+</employees>

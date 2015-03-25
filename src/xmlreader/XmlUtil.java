@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import main.TestRunner;
+import main.ADBUtil;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -31,16 +31,16 @@ public class XmlUtil {
 	public static void createXmlByClass(String fileName) {
 		Document document = DocumentHelper.createDocument();
 		Element employees = document.addElement("testcases");
-		TestRunner testRunner = new TestRunner();
-		List<String> list = testRunner.getFinalStrings();
+		List<String> list = ADBUtil.getFinalStrings();
 		System.out.println(list.size());
 		for (int j = 0; j < list.size(); j++) {
 			Element employee = employees.addElement("testcase");
 			employee.addAttribute("casename", list.get(j));
 			try {
-				employee.addAttribute("class", testRunner.getClass()
-						.getDeclaredField(list.get(j)).get(list.get(j))
-						.toString());
+				employee.addAttribute(
+						"class",
+						ADBUtil.class.getDeclaredField(list.get(j))
+								.get(list.get(j)).toString());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

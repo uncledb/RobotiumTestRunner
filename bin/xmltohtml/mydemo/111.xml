@@ -1,0 +1,170 @@
+<?xml version='1.0' ?>
+<testsuites>
+	<testsuite>
+		<testcase
+			classname="xxx.cases.mine.Mine_T2_MyOrderListTestCase"
+			name="testMyOrder" time="50.999" />
+		<testcase
+			classname="xxx.cases.mine.Mine_T3_VersionUpdateTestCase"
+			name="testVersionUpdate" time="42.984" />
+		<testcase
+			classname="xxx.cases.mine.Mine_T4_CancelOrderTestCase"
+			name="testCancelOrder">
+			<failure
+				message=" &#29579;&#23041;&#26159;&#37325;&#21517;&#30340;&#29992;&#25143;&#65292;&#20294;&#26159;&#27809;&#26377;&#37038;&#31665;&#26174;&#31034;"
+				type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError:
+				&#29579;&#23041;&#26159;&#37325;&#21517;&#30340;&#29992;&#25143;&#65292;&#20294;&#26159;&#27809;&#26377;&#37038;&#31665;&#26174;&#31034;
+				at
+				xxx.modules.impl.OrderImpl.searchSameNamePerson(OrderImpl.java:386)
+				at
+				xxx.modules.impl.OrderImpl.orderTicket(OrderImpl.java:43)
+				at
+				xxx.cases.mine.Mine_T4_CancelOrderTestCase.testCancelOrder(Mine_T4_CancelOrderTestCase.java:16)
+				at java.lang.reflect.Method.invokeNative(Native Method)
+				at
+				android.test.InstrumentationTestCase.runMethod(InstrumentationTestCase.java:214)
+				at
+				android.test.InstrumentationTestCase.runTest(InstrumentationTestCase.java:199)
+				at
+				android.test.ActivityInstrumentationTestCase2.runTest(ActivityInstrumentationTestCase2.java:192)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)
+				at
+				android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)
+				at
+				com.xxxxxxx.android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:43)
+				at
+				android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1710)
+			</failure>
+		</testcase>
+		<testcase
+			classname="xxx.cases.mine.Mine_T5_MyExamineTravelTestCase"
+			name="testMyExamineTravel">
+			<failure message=" ListView is not found!" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError:
+				ListView is not found!
+				at com.robotium.solo.Waiter.waitForAndGetView(Waiter.java:540)
+				at com.robotium.solo.Solo.getView(Solo.java:2075)
+				at
+				xxx.modules.impl.MineImpl.lookMyExamineTravel(MineImpl.java:161)
+				at
+				xxx.cases.mine.Mine_T5_MyExamineTravelTestCase.testMyExamineTravel(Mine_T5_MyExamineTravelTestCase.java:20)
+				at java.lang.reflect.Method.invokeNative(Native Method)
+				at
+				android.test.InstrumentationTestCase.runMethod(InstrumentationTestCase.java:214)
+				at
+				android.test.InstrumentationTestCase.runTest(InstrumentationTestCase.java:199)
+				at
+				android.test.ActivityInstrumentationTestCase2.runTest(ActivityInstrumentationTestCase2.java:192)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)
+				at
+				android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)
+				at
+				com.xxxxxxx.android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:43)
+				at
+				android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1710)
+			</failure>
+		</testcase>
+		<testcase
+			classname="xxx.cases.mine.Mine_T6_ChangeMyInfoTestCase"
+			name="testChangeMyInfo">
+			<failure
+				message=" &#27809;&#26377;&#20570;&#25163;&#26426;&#21495;&#37325;&#22797;&#26657;&#39564;"
+				type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError:
+				&#27809;&#26377;&#20570;&#25163;&#26426;&#21495;&#37325;&#22797;&#26657;&#39564;
+				at
+				xxx.modules.impl.MineImpl.changeMyInfo(MineImpl.java:535)
+				at
+				xxx.cases.mine.Mine_T6_ChangeMyInfoTestCase.testChangeMyInfo(Mine_T6_ChangeMyInfoTestCase.java:22)
+				at java.lang.reflect.Method.invokeNative(Native Method)
+				at
+				android.test.InstrumentationTestCase.runMethod(InstrumentationTestCase.java:214)
+				at
+				android.test.InstrumentationTestCase.runTest(InstrumentationTestCase.java:199)
+				at
+				android.test.ActivityInstrumentationTestCase2.runTest(ActivityInstrumentationTestCase2.java:192)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)
+				at
+				android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)
+				at
+				com.xxxxxxx.android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:43)
+				at
+				android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1710)
+			</failure>
+		</testcase>
+		<testcase
+			classname="xxx.cases.mine.Mine_T7_SuggestionTestCase"
+			name="testSuggestion">
+			<failure message=" View with id: 'rbtn_mine' is not found!"
+				type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: View with id: 'rbtn_mine'
+				is not found!
+				at com.robotium.solo.Solo.getView(Solo.java:2060)
+				at com.robotium.solo.Solo.getView(Solo.java:2040)
+				at
+				xxx.base.testbase.TestSupport.goToMine(TestSupport.java:387)
+				at
+				xxx.modules.impl.MineImpl.exit(MineImpl.java:35)
+				at
+				xxx.modules.impl.MineImpl.exitAndLogin(MineImpl.java:60)
+				at
+				xxx.cases.mine.Mine_T7_SuggestionTestCase.testSuggestion(Mine_T7_SuggestionTestCase.java:20)
+				at java.lang.reflect.Method.invokeNative(Native Method)
+				at
+				android.test.InstrumentationTestCase.runMethod(InstrumentationTestCase.java:214)
+				at
+				android.test.InstrumentationTestCase.runTest(InstrumentationTestCase.java:199)
+				at
+				android.test.ActivityInstrumentationTestCase2.runTest(ActivityInstrumentationTestCase2.java:192)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)
+				at
+				android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)
+				at
+				com.xxxxxxx.android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:43)
+				at
+				android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1710)
+			</failure>
+		</testcase>
+		<testcase
+			classname="xxx.cases.mine.Mine_T1_RepassTestCase"
+			name="testRepass">
+			<failure
+				message=" expected:&lt;[]&gt; but was:&lt;[&#29992;&#25143;&#21517;&#25110;&#23494;&#30721;&#38169;&#35823;&#65292;&#30331;&#24405;&#22833;&#36133;]&gt;"
+				type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: expected:&lt;[]&gt; but
+				was:&lt;[&#29992;&#25143;&#21517;&#25110;&#23494;&#30721;&#38169;&#35823;&#65292;&#30331;&#24405;&#22833;&#36133;]&gt;
+				at
+				xxx.base.testbase.TestSupport.login(TestSupport.java:92)
+				at
+				xxx.cases.mine.Mine_T1_RepassTestCase.testRepass(Mine_T1_RepassTestCase.java:20)
+				at java.lang.reflect.Method.invokeNative(Native Method)
+				at
+				android.test.InstrumentationTestCase.runMethod(InstrumentationTestCase.java:214)
+				at
+				android.test.InstrumentationTestCase.runTest(InstrumentationTestCase.java:199)
+				at
+				android.test.ActivityInstrumentationTestCase2.runTest(ActivityInstrumentationTestCase2.java:192)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)
+				at
+				android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)
+				at
+				android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)
+				at
+				com.xxxxxxx.android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:43)
+				at
+				android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1710)
+			</failure>
+		</testcase>
+		<system-out />
+		<system-err />
+	</testsuite>
+</testsuites>

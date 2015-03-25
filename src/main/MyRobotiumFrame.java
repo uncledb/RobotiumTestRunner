@@ -42,10 +42,11 @@ public class MyRobotiumFrame extends JFrame {
 	protected JLabel label_cases;
 	protected JScrollPane jScrollPane1;
 	protected JTextArea textArea;
+	@SuppressWarnings("rawtypes")
 	protected JComboBox jComboBox_case;
+	@SuppressWarnings("rawtypes")
 	protected JComboBox jComboBox_devices;
 	static Font font = new Font("微软雅黑", Font.BOLD, 12);
-	TestRunner testRunner = new TestRunner();
 	SimpleDateFormat dateformat1 = new SimpleDateFormat("MM-dd HH-mm-ss");
 	Map<String, String> cases;
 
@@ -53,6 +54,7 @@ public class MyRobotiumFrame extends JFrame {
 		initComponents();
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void initComponents() {
 		Container con = this.getContentPane();
 		label_device = new JLabel("设备：");
@@ -130,7 +132,7 @@ public class MyRobotiumFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			System.out.println("您点击了excel按钮");
 			String selected = jComboBox_devices.getSelectedItem().toString();
-			String result = testRunner.pushExcelDataFile(selected);
+			String result = ADBUtil.pushExcelDataFile(selected);
 			textArea.append("Excel导入结果为：" + result + "\r\n");
 			textArea.append("----------------------------------------------------------------\r\n");
 		}
@@ -152,7 +154,7 @@ public class MyRobotiumFrame extends JFrame {
 			int beginIndex = deviceName.indexOf(" ");
 			deviceName = deviceName.substring(0, beginIndex);
 			String fileName = deviceName + "_" + selectedcase + "_手动";
-			String result = testRunner.pullXMLResultFile(fileName, selected);
+			String result = ADBUtil.pullXMLResultFile(fileName, selected);
 			textArea.append("XML导出结果为：" + result + "\r\n");
 			textArea.append("----------------------------------------------------------------\r\n");
 		}
@@ -175,7 +177,7 @@ public class MyRobotiumFrame extends JFrame {
 			System.out.println("---" + selectedcase + "---");
 			textArea.append("开始运行用例：" + selectedcase + "\r\n");
 			try {
-				boolean b = testRunner.runTestCase(cases.get(selectedcase),
+				boolean b = ADBUtil.runTestCase(cases.get(selectedcase),
 						selecteddevice);
 				if (b) {
 					textArea.append("用例：" + selectedcase + "执行成功\r\n");
@@ -186,8 +188,9 @@ public class MyRobotiumFrame extends JFrame {
 				e1.printStackTrace();
 			}
 			textArea.append("用例结束 自动导出XML返回的结果："
-					+ testRunner.pullXMLResultFile(deviceName + "_"
-							+ selectedcase, selecteddevice) + "\r\n");
+					+ ADBUtil.pullXMLResultFile(
+							deviceName + "_" + selectedcase, selecteddevice)
+					+ "\r\n");
 			textArea.append("----------------------------------------------------------------\r\n");
 		}
 	}
