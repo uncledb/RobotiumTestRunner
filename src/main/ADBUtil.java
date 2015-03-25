@@ -297,7 +297,7 @@ public class ADBUtil {
 	}
 
 	/**
-	 * 将截图复制到电脑上 并且删除文件夹内的所有文件 以免重复导入 /sdcard/Robotium-Screenshots/
+	 * 将截图复制到电脑上 并且删除文件夹内的所有文件 以免重复导入 /sdcard/Robotium-Screenshots/ 方法待完善 不可以用
 	 * 
 	 * @return
 	 */
