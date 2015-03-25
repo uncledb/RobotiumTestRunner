@@ -44,8 +44,14 @@ public class ADBUtil {
 	 * 重启手机 指定某个手机重启待验证
 	 */
 	public static final String REBOOT = "reboot";
-
+	/**
+	 * 崩溃标识
+	 */
 	public static String CRASH = "shortMsg=Process crashed";
+	/**
+	 * 测试包名和对应测试运行类
+	 */
+	public static String TESTCLASS_PACKAGE = "com.xxx.xxxx.test/com.xxx.android.test.InstrumentationTestRunner";
 
 	// 选择指定的设备 adb -s XXXX install 1.apk
 	/**
@@ -253,19 +259,12 @@ public class ADBUtil {
 			device = " -s " + device;
 		}
 		try {
-			Process p = Runtime
-					.getRuntime()
-					.exec("adb "
-							+ device
-							+ " shell am instrument -e class "
-							+ className
-							+ " -w com.yonyou.travelmanager2.test/com.yonyou.android.test.InstrumentationTestRunner");
-			System.out
-					.println("adb "
-							+ device
-							+ " shell am instrument -e class "
-							+ className
-							+ " -w com.yonyou.travelmanager2.test/com.yonyou.android.test.InstrumentationTestRunner");
+			Process p = Runtime.getRuntime().exec(
+					"adb " + device + " shell am instrument -e class "
+							+ className + " -w " + TESTCLASS_PACKAGE);
+			System.out.println("adb " + device
+					+ " shell am instrument -e class " + className + " -w "
+					+ TESTCLASS_PACKAGE);
 			br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			errorbr = new BufferedReader(new InputStreamReader(
 					p.getErrorStream()));
