@@ -5,6 +5,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * map遍历工具 测试用
+ */
 public class MapUtil {
 	public static void work(Map<String, String> map) {
 		Collection<String> c = map.values();
